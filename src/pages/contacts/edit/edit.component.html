@@ -1,0 +1,21 @@
+<h1>Edit Contact</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" *ngIf="contact">
+  <label for="first-name">First name:</label>
+  <input id="first-name" formControlName="firstname" type="text" />
+
+  <label for="last-name">Last name:</label>
+  <input id="last-name" formControlName="lastname" type="text" />
+
+  <label for="street">Street:</label>
+  <input id="street" formControlName="street" type="text" />
+
+  <label for="city">City:</label>
+  <input id="city" formControlName="city" type="text" />
+
+  <div class="actions">
+    <div class="spacer"></div>
+    <button type="submit">Save changes</button>
+  </div>
+</form>
+
+<h2 *ngIf="contact === undefined">No user selected</h2>
